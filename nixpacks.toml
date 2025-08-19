@@ -1,5 +1,6 @@
 [phases.setup]
 packages = ["php81", "composer", "php81Extensions.pdo_mysql", "nodejs", "npm"]
+commands = ["php -v"]
 
 [phases.install]
 commands = [
@@ -12,11 +13,11 @@ commands = [
 commands = [
   "php artisan config:cache",
   "php artisan route:cache",
-  "php artisan view:cache"
+  "php artisan view:cache",
+  "php artisan migrate --force"
 ]
 
 [phases.start]
-commands = [
-  "php artisan migrate --force",
+cmds = [
   "php -S 0.0.0.0:$PORT -t public"
 ]
