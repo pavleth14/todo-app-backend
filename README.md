@@ -27,4 +27,4 @@ php artisan key:generate
 php artisan migrate
 
 # 7. Pokreni lokalni server
-php artisan serve
+& "C:\php81\php-8.1.33-nts-Win32-vs16-x64\php.exe" artisan serve
